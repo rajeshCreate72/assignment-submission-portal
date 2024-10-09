@@ -54,4 +54,4 @@ For Admin - ```/api/v1/admin```
   - `GET /assignments`: View assignments tagged to the admin.
   - `POST /assignments/:id/accept`: To accept the assignments.
   - `POST /assignment/:id/reject`:  To reject the assignments.
-  - `POST /:id/approve`: To approve the admin access to a user.
+  - `POST /:id/approve`: To approve the admin access.
