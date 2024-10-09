@@ -155,7 +155,7 @@ router.post("/assignments/:id/reject", async (req, res) => {
 
 // Use this route to approve the admin to login
 // This route should be used in the profile of a person that is higher than admin
-router.post("/:adminId/approve", adminMiddleware, approveAdmin)
+router.post("/:id/approve", adminMiddleware, approveAdmin)
 
 
 module.exports = router
