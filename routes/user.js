@@ -29,7 +29,7 @@ router.post("/register", async (req, res) => {
 
         const jwtToken = await jwt.sign(
             { userId: id, userName: name},
-            process.env.JWT_SECRECT
+            process.env.JWT_SECRET
         )
 
         res.status(201).json({ token: jwtToken})
@@ -58,7 +58,7 @@ router.post("/login", async(req, res) => {
 
         const jwtToken = await jwt.sign(
             {userId: user.userId, userName: user.userName},
-            process.env.JWT_SECRECT
+            process.env.JWT_SECRET
         )
 
         res.status(200).json({ token: jwtToken })
@@ -117,7 +117,6 @@ router.get("/admins", async (req, res) => {
         res.status(500).json({ message: "error fetching admins", error: error })
     }
 })
-
 
 
 module.exports = router
